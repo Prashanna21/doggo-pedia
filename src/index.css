@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... */
+ 
+html,
+body,
+#root{
+  height: 100%;
+  background-color: rgb(254,251,242);
+}
+
+
+@layer base {
+  :root {
+    
+    --radius: 0.5rem
+  }
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 300; /* Light */
+  font-style: normal;
+  src: local("Ubuntu-Light"),
+       url("/fonts/Ubuntu-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 400; 
+  font-style: normal;
+  src: local("Ubuntu-Regular"),
+       url("/fonts/Ubuntu-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  src: local("Ubuntu-Medium"),
+       url("/fonts/Ubuntu-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  src: local("Ubuntu-Bold"),
+       url("/fonts/Ubuntu-Bold.ttf") format("truetype");
+}
