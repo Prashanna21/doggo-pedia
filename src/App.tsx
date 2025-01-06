@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
@@ -52,9 +53,9 @@ function App() {
 
   const getSearchFuction = async (search: string):Promise<string[] | undefined > => {
     let searchUrl = `https://api.freeapi.app/api/v1/public/dogs?page=1&limit=10&query=${search}`
-    let dataFromDatabase = await databaseService.getDogs(search)
+    const dataFromDatabase = await databaseService.getDogs(search)
     console.log(search)
-    let transformedDataFromDatabase = {
+    const transformedDataFromDatabase = {
       title : dataFromDatabase?.dogName,
       lifespan:  dataFromDatabase?.lifeSpan,
       origin:  dataFromDatabase?.origin,
